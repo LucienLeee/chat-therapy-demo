@@ -1,12 +1,8 @@
 import os
 #模型下载
-from modelscope.hub.snapshot_download import snapshot_download
-
-# 创建保存模型目录
-os.system("mkdir -p /root/models")
-
-# save_dir是模型保存到本地的目录
-save_dir="/root/models"
-
-snapshot_download('LucienJMLee/chat-therapy-base', 
-                  cache_dir=save_dir)
+base_path = './chat-therapy'
+# download repo to the base_path directory using git
+os.system('apt install git')
+os.system('apt install git-lfs')
+os.system(f'git clone https://code.openxlab.org.cn/LucienJMLee/chat-therapy.git {base_path}')
+os.system(f'cd {base_path} && git lfs pull')

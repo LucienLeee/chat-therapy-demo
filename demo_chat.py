@@ -218,7 +218,7 @@ def main():
     model, tokenizer = load_model()
     print('load model end.')
 
-    st.title('猪猪Chat-InternLM2')
+    st.title('话疗-demo')
 
     generation_config = prepare_generation_config()
 

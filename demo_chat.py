@@ -220,7 +220,6 @@ def main():
     user_avator = "assets/user.png"
     robot_avator = "assets/robot.jpeg"
 
-    # st.title("EmoLLM-温柔御姐艾薇（aiwei）")
     st.title("话疗（chat-therapy）- demo AI心理咨询")
 
     generation_config = prepare_generation_config()

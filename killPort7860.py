@@ -15,23 +15,23 @@ def kill_process(pid):
     """终止指定进程ID的进程"""
     try:
         proc = psutil.Process(pid)
-        proc.terminate()
+        proc.kill()  # 强制终止进程
         proc.wait(timeout=3)
-        print(f"进程 {pid} 已被终止。")
+        print(f"进程 {pid} 已被强制终止。")
     except psutil.NoSuchProcess:
         print(f"进程 {pid} 不存在。")
     except psutil.AccessDenied:
         print(f"没有权限终止进程 {pid}。")
     except psutil.TimeoutExpired:
-        print(f"终止进程 {pid} 超时。")
+        print(f"强制终止进程 {pid} 超时。")
     except Exception as e:
-        print(f"终止进程 {pid} 时出错: {e}")
+        print(f"强制终止进程 {pid} 时出错: {e}")
 
 def main():
     port = 7860
     pid = find_process_by_port(port)
     if pid:
-        print(f"端口 {port} 被进程 {pid} 占用，正在终止...")
+        print(f"端口 {port} 被进程 {pid} 占用，正在强制终止...")
         kill_process(pid)
     else:
         print(f"没有进程占用端口 {port}。")

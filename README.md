@@ -1,5 +1,6 @@
 # chat-therapy-demo
 话疗demo心理咨询大模型
+
 [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/LucienJMLee/chat-therapy)
 
 1.项目背景
@@ -21,7 +22,9 @@
 
 4.技术方案
 
-数据来源：使用公开的心理咨询报告，如《中小学心理健康教育》期刊，改为多轮对话格式后进行模型训练和微调。
-技术架构：采用Streamlit开发客户端界面，后端部署微调后的心理咨询大模型。客户端接收用户输入，进行Prompt拼接后发送至服务端，服务端返回处理结果并展示给用户。
+数据来源：公开的心理咨询报告，如《中小学心理健康教育》期刊。
+数据合成：使用头部模型改写数据，模拟真实的人类咨访对话。
+模型训练：SFT微调
+咨询流派：认知行为疗法（CBT）。
 
 通过以上方案，话疗demo项目旨在为用户提供一个高效、便捷且个性化的心理咨询服务，帮助用户更好地管理自己的心理健康。

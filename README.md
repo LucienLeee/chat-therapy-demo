@@ -37,5 +37,6 @@
 
 咨询流派：认知行为疗法（CBT）。
 
+模型链接：https://www.modelscope.cn/models/LucienJMLee/chat-therapy-base
 
 通过以上方案，话疗demo项目旨在为用户提供一个高效、便捷且个性化的心理咨询服务，帮助用户更好地管理自己的心理健康。
